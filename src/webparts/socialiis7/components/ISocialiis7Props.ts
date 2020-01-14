@@ -21,9 +21,18 @@ export interface IWeb {
   order: number; //For Sorting
   url: string;
   codeType: string; //Used to determine what functions to have avaialble
+  objectID?: string;
 
 }
 
+export interface INewsFeed {
+  title: string;
+  titleKey?: string;
+  order: number; //For Sorting
+  url: string;
+  codeType: string; //Used to determine what functions to have avaialble
+
+}
 
 export interface IYoutubeObject {
   title: string;
@@ -67,6 +76,7 @@ export interface IEntity {
   navigation?: INavLink[];
   selectedNav?: INavLink;
   steamStore?: IWeb[];
+  feeds?: INewsFeed[];
 
 }
 

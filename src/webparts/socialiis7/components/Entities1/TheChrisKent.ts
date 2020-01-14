@@ -1,25 +1,31 @@
 
 import { IEntity } from '../ISocialiis7Props';
 
-export function Sample(){
+export function TheChrisKent(){
 
   const entity :IEntity = {
-    title: 'Sample', //
-    keywords: ["Keyword1","Keyword2","Keyword3"], // Can be any number of
-    profilePic: "https://someURL.com",
+    title: 'Chris Kent', //
+    keywords: ["MVP","SharePoint","SPFx","ColumnFormatting"],
+    profilePic: "",
     blog: [
       {
-        title: 'Someone\'s Blog',
+        title: 'About Me',
+        order: 1, //For Sorting
+        url: '',
+        codeType: 'TBD', //Used to determine what functions to have avaialble
+      },
+      {
+        title: '',
         order: 1, //For Sorting
         url: '',
         codeType: 'TBD', //Used to determine what functions to have avaialble
       }
     ],
     twitter: 
-      {
-        title: '',
+    {
+        title: '@theChrisKent',
         order: 1, //For Sorting
-        url: '',
+        url: 'https://twitter.com/theChrisKent',
         codeType: 'TBD', //Used to determine what functions to have avaialble
       }
     ,  // End twitter
@@ -33,7 +39,7 @@ export function Sample(){
     ,  // End facebook
     linkedIn: 
       {
-        title: '',
+        title: 'Linked In',
         order: 1, //For Sorting
         url: '',
         codeType: 'TBD', //Used to determine what functions to have avaialble
@@ -41,7 +47,7 @@ export function Sample(){
     ,  // End linkedIn
     github: 
       {
-        title: '',
+        title: 'Github',
         order: 1, //For Sorting
         url: '',
         codeType: 'TBD', //Used to determine what functions to have avaialble

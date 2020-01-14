@@ -1,11 +1,11 @@
 
 import { IEntity } from '../ISocialiis7Props';
 
-export function Jays2Cents(){
+export function CES(){
 
   const entity :IEntity = {
-    title: 'Jays 2 Cents YouTuber', //
-    keywords: ["PC","PCBuild","HomeRepairs"], // Can be any number of
+    title: 'CES', //
+    keywords: ["Electronics","Tradeshow","NA","North America"], // Can be any number of
     profilePic: "https://someURL.com",
     blog: [
       {
@@ -57,7 +57,7 @@ export function Jays2Cents(){
     ],
     youtube: {
       title: 'YouTube',
-      user: 'Jayztwocents', //Youtube User (from URL)
+      user: 'cesonthetube', //Youtube User (from URL)
       order: 0, //For Sorting
       items: [
         {
@@ -71,54 +71,17 @@ export function Jays2Cents(){
           objectID: '', //Used to determine what functions to have avaialble
           objectUrl: '', // to be used as generic link if no API key is given
         },{
-          title: '',
+          title: 'CES Tech Talk Podcast',
           objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
-          objectID: '', //Used to determine what functions to have avaialble
+          objectID: 'PLm9O7GKkPgESf3iU7VXlxuGrs9TqCsM1Q', //Used to determine what functions to have avaialble
           objectUrl: '', // to be used as generic link if no API key is given
         },{
-          title: 'Wood Case mod',
-          objectType: 'Video', //user,Channel, Playlist, Videos, Video
-          objectID: 'lUyfdRpqDp0', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
-        },{
-          title: 'Intel vs AMD - 2020',
-          objectType: 'Video', //user,Channel, Playlist, Videos, Video
-          objectID: 'p-B3_QXBgZk', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
-        },{
-          title: 'Make old PC fast',
-          objectType: 'Video', //user,Channel, Playlist, Videos, Video
-          objectID: '9zGMi7HZ2AA', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
-        },{
-          title: 'New AMD CPUs... should I upgrade?',
-          objectType: 'Video', //user,Channel, Playlist, Videos, Video
-          objectID: 'ElQbvMj08Ro', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
-        },{
-          title: 'What to do?',
-          objectType: 'Video', //user,Channel, Playlist, Videos, Video
-          objectID: 'mVccnAr39Mo', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
-        },{
-          title: '10 Realistic games of 2020?',
-          objectType: 'Video', //user,Channel, Playlist, Videos, Video
-          objectID: 'XiJGsTnJfhs', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
-        },{
-          title: 'Replace GPU Thermal Paste?',
-          objectType: 'Video', //user,Channel, Playlist, Videos, Video
-          objectID: '6HbCY3-tun0', //Used to determine what functions to have avaialble
+          title: 'CES 2020',
+          objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
+          objectID: 'PLm9O7GKkPgETvf4OxLHTLuikyeRLDlt8C', //Used to determine what functions to have avaialble
           objectUrl: '', // to be used as generic link if no API key is given
         }
-
-
-        
-
-
-
-        
-      ] // End YouTube items
+      ] // End YouTube playlists
     }, // End YouTube
 
 
