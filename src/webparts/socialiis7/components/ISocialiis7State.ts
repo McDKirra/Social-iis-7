@@ -46,6 +46,10 @@ export interface ILoadData {
     Entities7: IEntity[];
     Entities9: IEntity[];
 
+    userEntities1: IEntity[];
+    userEntities2: IEntity[];
+    userEntities3: IEntity[];
+
     allEntities: IEntity[];
     allEntityKeywords: string[];
     allTopics: string[];
@@ -91,6 +95,16 @@ export interface ISocialiis7State {
         subTopic2?: string;
         subTopic3?: string;
     };
+
+    //Saved in webpart props
+    userEntities1?: string;
+    userEntities2?: string;  
+    userEntities3?: string;
+
+    //Input box any user can add to
+    userEntitiesTest1: string;
+    userEntitiesTest2: string;
+    userEntitiesTest3: string;
     
     // 8 - Pivot Choices - Top Bar
     currentPivotSet: string;
