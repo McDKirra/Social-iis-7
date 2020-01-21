@@ -1,15 +1,15 @@
 
 import { IEntity } from '../ISocialiis7Props';
 
-export function MineCraft(){
+export function FlightSimulator20(){
 
   const entity :IEntity = {
-    title: 'MineCraft', //
-    keywords: ["PC","Gaming","OpenWorld","Builder","MultiPlayer"], // Can be any number of
-    profilePic: "https://www.westbuxtonpubliclibrary.org/wp-content/uploads/2018/09/0fe20042-0bb8-4781-82f4-7130f928b021.jpg?w=1400",
+    title: 'Flight Simulator', //
+    keywords: ["PC","Gaming","Simulation","Flight"], // Can be any number of
+    profilePic: "https://msgpwebsites.azureedge.net/fsi/wp-content/uploads/2019/06/KittyHawk_E3_withLogo_003-2.jpg",
     blog: [
       {
-        title: 'Someone\'s Blog',
+        title: '',
         order: 1, //For Sorting
         url: '',
         codeType: 'TBD', //Used to determine what functions to have avaialble
@@ -49,6 +49,16 @@ export function MineCraft(){
     ,  // End github
     webSites: [
       {
+        title: 'Flight Simulator.com',
+        order: 1, //For Sorting
+        url: 'https://www.flightsimulator.com/',
+        codeType: 'TBD', //Used to determine what functions to have avaialble
+      },      {
+        title: 'Insider FAQ',
+        order: 1, //For Sorting
+        url: 'https://www.flightsimulator.com/insider-program-faq/',
+        codeType: 'TBD', //Used to determine what functions to have avaialble
+      },      {
         title: '',
         order: 1, //For Sorting
         url: '',
@@ -56,29 +66,30 @@ export function MineCraft(){
       }
     ],
     youtube: {
-      title: 'DanTDM',
-      user: 'TheDiamondMinecart', //Youtube User (from URL)
+      title: 'YouTube',
+      user: '', //Youtube User (from URL)
       order: 0, //For Sorting
       items: [
         {
-          title: '',
-          objectType: 'User', //user,Channel, Playlist, Videos, Video
-          objectID: 'stampylonghead', //Used to determine what functions to have avaialble
+          title: 'In depth review Oct 4, 10',
+          objectType: 'Video', //user,Channel, Playlist, Videos, Video
+          objectID: 'MOPIjzzH1G8', //Used to determine what functions to have avaialble
           objectUrl: '', // to be used as generic link if no API key is given
         },{
-          title: '',
+          title: 'Flight Sim Channel',
           objectType: 'Channel', //user,Channel, Playlist, Videos, Video
+          objectID: 'UCdWFNDBen7LQc0eZUiJPW4Q', //Used to determine what functions to have avaialble
+          objectUrl: '', // to be used as generic link if no API key is given
+        },
+        {
+          title: 'New Flight Sim News',
+          objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
+          objectID: 'PLgmvnsNGp2X2S6aZ1sYomx7p7jK75eRCs', //Used to determine what functions to have avaialble
+          objectUrl: '', // to be used as generic link if no API key is given
+        },{
+          title: '',
+          objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
           objectID: '', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
-        },{
-          title: 'Stampy\'s Lovely World',
-          objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
-          objectID: 'PLEZiAg2bYC7ngh-_Z_ruvzSfn1KPQRL5V', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
-        },{
-          title: 'Stampy\'s Funland',
-          objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
-          objectID: 'PLEZiAg2bYC7nOHBB_VqGYe1CdaYD-eorq',
           objectUrl: '', // to be used as generic link if no API key is given
         }
       ] // End YouTube items
