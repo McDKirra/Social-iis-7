@@ -1,13 +1,12 @@
-
 import { IEntity } from '../ISocialiis7Props';
 
 
-export function DarkSouls(){
+export function ZeldaBotW(){
 
     const entity :IEntity = {
-      title: 'Dark Souls', //
-      keywords: ["ttp","Gaming","RPG","Multiplayer"],
-      profilePic: "https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg",
+      title: 'ZeldaBotW', //
+      keywords: ["ttp","Nintendo","Switch","Gaming","RPG","Multiplayer"],
+      profilePic: "https://www.zelda.com/breath-of-the-wild/assets/media/wallpapers/desktop-1.jpg",
       blog: [
         {
           title: '',
@@ -18,17 +17,17 @@ export function DarkSouls(){
       ],
       twitter:
         {
-          title: '@DarkSoulsGame',
+          title: '',
           order: 1, //For Sorting
-          url: 'https://twitter.com/DarkSoulsGame',
+          url: '',
           codeType: 'TBD', //Used to determine what functions to have avaialble
         }
       ,  // End twitter
       facebook:
       {
-        title: 'Dark Souls Community',
+        title: '',
         order: 1, //For Sorting
-        url: 'https://www.facebook.com/darksoulsEU/?brand_redir=163714144280778',
+        url: '',
         codeType: 'TBD', //Used to determine what functions to have avaialble
       }
       ,  // End facebook
@@ -50,11 +49,16 @@ export function DarkSouls(){
       ,  // End github
       webSites: [
         {
-          title: 'Dark Souls',
+          title: 'Zelda.com',
           order: 1, //For Sorting
-          url: 'https://en.wikipedia.org/wiki/Dark_Souls',
+          url: 'https://www.zelda.com/breath-of-the-wild/',
           codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
+        },{
+            title: 'Wikipedia',
+            order: 1, //For Sorting
+            url: 'https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild',
+            codeType: 'TBD', //Used to determine what functions to have avaialble
+          }        
       ],
       youtube: {
         title: 'YouTube',
@@ -62,20 +66,19 @@ export function DarkSouls(){
         order: 0, //For Sorting
         items: [
           {
-            title: 'Your video',
-            objectType: 'video', //user,Channel, Playlist, Videos, Video
-            objectID: '6u2w7kzmweU', //Used to determine what functions to have avaialble
+            title: 'Nintendo YouTube',
+            objectType: 'User', //user,Channel, Playlist, Videos, Video
+            objectID: 'Nintendo', //Used to determine what functions to have avaialble
             objectUrl: '', // to be used as generic link if no API key is given
-          },
-          {
-            title: 'Dark Souls Walkthrough',
+        },{
+            title: 'BotW PlayList',
             objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
-            objectID: 'PL7RtZMiaOk8i5W4e8j_Bz6YDdFq3o4aAh', //Used to determine what functions to have avaialble
+            objectID: 'PL2JiZAV5BmDULhRvaW7CgwicEUIgKqQ4N', //Used to determine what functions to have avaialble
             objectUrl: '', // to be used as generic link if no API key is given
           },{
-            title: '',
+            title: 'Stampy\`s BotW',
             objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
-            objectID: '', //Used to determine what functions to have avaialble
+            objectID: 'PLEZiAg2bYC7nXdTKT4sBqU5RRZa7ShTsD', //Used to determine what functions to have avaialble
             objectUrl: '', // to be used as generic link if no API key is given
           }
         ] // End YouTube items
