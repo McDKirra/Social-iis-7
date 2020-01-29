@@ -41,6 +41,8 @@ npm install on-el-resize  (For Facebook component)
 
 npm i react-iframe (2020-01-21 For React Iframe)
 
+npm install webpack-bundle-analyzer --save-dev  (2020-01-28:  To analyze web pack size)
+
 ```
 
 ## ToDo
@@ -49,6 +51,18 @@ https://www.regextester.com/94245
 
 \/\*[\s\S]*?\*\/|([^:]|^)\/\/.*$
 
+
+## Example of List Rest Filter syntax:
+
+Text column Contains:  This will look for the string 'active' in the column 'keywords'.
+```
+substringof('active',keywords)
+```
+
+Text column Equals:  This will look for all items where the Title column = "FindMe".
+```
+Title eq 'FindMe'
+```
 
 ## Sample JSON Structure for an entity 
 ```JSON

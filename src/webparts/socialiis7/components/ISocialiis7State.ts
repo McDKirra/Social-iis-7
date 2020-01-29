@@ -1,5 +1,5 @@
 
-import { ISocialiis7Props, IEntity } from './ISocialiis7Props';
+import { ISocialiis7Props, ITopics, IEntity } from './ISocialiis7Props';
 import { string } from 'prop-types';
 
 import { ITheTime } from '../../../services/dateServices';
@@ -39,6 +39,12 @@ export interface IUser {
     LoginName?: string;
 }
 
+export interface IListEntities {
+    listEntites: IEntity[];
+    entityTitles: string[];
+
+}
+
 export interface ILoadData {
     Entities1: IEntity[];
     Entities2: IEntity[];
@@ -49,6 +55,14 @@ export interface ILoadData {
     userEntities1: IEntity[];
     userEntities2: IEntity[];
     userEntities3: IEntity[];
+
+    localItems?: any;
+    localEntities?: IEntity[];
+    localEntityTitles?: string[];
+    
+    masterItems?: any;
+    masterEntities?: IEntity[];
+    masterEntityTitles?: string[];
 
     allEntities: IEntity[];
     allEntityKeywords: string[];
@@ -67,15 +81,28 @@ export interface ILoadData {
 export interface ISocialiis7State {
     // 0 - Context
     currentUser?: IUser;  //Current user information
+    WebpartHeight?:  Number;    //Size courtesy of https://www.netwoven.com/2018/11/13/resizing-of-spfx-react-web-parts-in-different-scenarios/
+    WebpartWidth?:   Number;    //Size courtesy of https://www.netwoven.com/2018/11/13/resizing-of-spfx-react-web-parts-in-different-scenarios/
 
     // 1 - Analytics options
     
     description: string;
     endTime?: ITheTime;
+    lastEvent?: string;
 
     // 2 - Source and destination list information
-    sourceListURL?: string; //Get from list item  
-    sourceListName: string;  // Static Name of list (for URL) - used for links and determined by first returned item
+    useLocalList?: Boolean;
+    useMasterList?: Boolean;
+    hardCodedLoaded?: Boolean;
+    localListLoaded?: Boolean;
+    masterListLoaded?: Boolean;
+    allLoaded: Boolean;
+    loadOrder?: string[];
+    localListURL?: string; //Get from list item  
+    masterListURL?: string; //Corporate or Central list url
+    localListFilter?: string; //Get from list item
+    masterListFilter?: string; //Corporate or Central list url
+//    sourceListName: string;  // Static Name of list (for URL) - used for links and determined by first returned item
 
 
     // 3 - 
@@ -83,18 +110,14 @@ export interface ISocialiis7State {
     // 4 - 
 
     // 5 - UI Defaults
-
+    setLayout?: string;
+    
     // 6 - User Feedback
 
     // 7 - Media Choices - Left Side bar
     navigationType: string;
 
-    topics: {
-        mainTopic?: string;
-        subTopic1?: string;
-        subTopic2?: string;
-        subTopic3?: string;
-    };
+    topics: ITopics ;
 
     //Saved in webpart props
     userEntities1?: string;

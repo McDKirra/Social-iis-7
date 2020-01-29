@@ -4,82 +4,78 @@ import { IEntity } from '../ISocialiis7Props';
 export function SIGGeneralDev(){
 
     const entity :IEntity = {
-      title: 'SIG General', //
+      Title: 'SIG General', //
       keywords: ["SIG","SharePoint","SPFx"],
       profilePic: "https://developer.microsoft.com/en-us/office/blogs/wp-content/uploads/2019/03/sig-21st-video-900x360.png",
       blog: [
         {
-          title: 'Blog',
+          NavTitle: 'Blog',
           order: 1, //For Sorting
           url: 'https://developer.microsoft.com/en-us/sharepoint/blogs/',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
+          objectType: 'TBD', //Used to determine what functions to have avaialble
         }
       ],
       twitter: 
         {
-          title: 'Twitter @SharePoint',
+          NavTitle: 'Twitter @SharePoint',
           order: 1, //For Sorting
           url: 'https://twitter.com/sharepoint',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
-      ,  // End twitter
+          objectType: 'TBD', //Used to determine what functions to have avaialble
+        } ,  // End twitter
       facebook: 
       {
-        title: '',
+        NavTitle: '',
         order: 1, //For Sorting
         url: '',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
-      }
-      ,  // End facebook
+        objectType: 'TBD', //Used to determine what functions to have avaialble
+      } ,  // End facebook
       linkedIn: 
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
-      ,  // End linkedIn
+          objectType: 'TBD', //Used to determine what functions to have avaialble
+        } ,  // End linkedIn
       github: 
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
-      ,  // End github
+          objectType: 'TBD', //Used to determine what functions to have avaialble
+        } ,  // End github
       webSites: [
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
+          objectType: 'TBD', //Used to determine what functions to have avaialble
         }
       ],
       youtube: {
-        title: 'YouTube',
+        NavTitle: 'YouTube',
         user: '', //Youtube User (from URL)
         order: 0, //For Sorting
         items: [
           {
-            title: '',
+            NavTitle: '',
             objectType: 'Video', //user,Channel, Playlist, Videos, Video
             objectID: '', //Used to determine what functions to have avaialble
-            objectUrl: '', // to be used as generic link if no API key is given
+            url: '', // to be used as generic link if no API key is given
           },{
-            title: '',
+            NavTitle: '',
             objectType: 'Channel', //user,Channel, Playlist, Videos, Video
             objectID: '', //Used to determine what functions to have avaialble
-            objectUrl: '', // to be used as generic link if no API key is given
+            url: '', // to be used as generic link if no API key is given
           },{
-            title: 'General Dev playlist',
+            NavTitle: 'General Dev playlist',
             objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
             objectID: 'PLR9nK3mnD-OURfm5Ypu-wK52cxBv_gXCA', //Used to determine what functions to have avaialble
-            objectUrl: 'https://www.youtube.com/playlist?list=PLR9nK3mnD-OURfm5Ypu-wK52cxBv_gXCA', // to be used as generic link if no API key is given
+            url: 'https://www.youtube.com/playlist?list=PLR9nK3mnD-OURfm5Ypu-wK52cxBv_gXCA', // to be used as generic link if no API key is given
           },{
-            title: '',
+            NavTitle: '',
             objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
             objectID: '', //Used to determine what functions to have avaialble
-            objectUrl: '', // to be used as generic link if no API key is given
+            url: '', // to be used as generic link if no API key is given
           }
         ] // End YouTube items
       }, // End YouTube

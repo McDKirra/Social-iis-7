@@ -43,19 +43,23 @@ export interface IAboutInfoState {
 export default class AboutInfo extends React.Component<IAboutInfoProps, IAboutInfoState> {
   constructor(props: IAboutInfoProps) {
     super(props);
+
     this.state = { 
-      selectedEntityTitle: this.props.parentState.selectedEntity.titleKey,
+      //selectedEntityTitle: this.props.parentState.selectedEntity.titleKey,
+      selectedEntityTitle: this.props.parentState.selectedEntity ? this.props.parentState.selectedEntity.titleKey : 'None Available',
     };
   }
 
   public render(): React.ReactElement<IAboutInfoProps> {
 
+    if ( this.props.parentState.selectedNavItem == null ) { return null; }
+
     let selectedNavKey : string = this.props.parentState.selectedNavKey;
     let selectedNavItem : INavLink = this.props.parentState.selectedNavItem;
     let Entity : IEntity = this.props.parentState.selectedEntity;  
-    if (!selectedNavItem ) { selectedNavItem = Entity.navigation[0];}
+    if (!selectedNavItem ) { selectedNavItem = Entity.navigation[0] ? Entity.navigation[0] : null; }
     const stackFormRowsTokens: IStackTokens = { childrenGap: 10 };
-    console.log('Render AboutInfo parentState',this.props.parentState);
+    //console.log('Render AboutInfo parentState',this.props.parentState);
 
     //showDebug
     let showDebug = false;
@@ -72,6 +76,7 @@ export default class AboutInfo extends React.Component<IAboutInfoProps, IAboutIn
     else if (selectedNavItem.objectType.toLowerCase().indexOf('channel') > -1 ) { objectType = 'channelId'; youTube = true; }
     else if (selectedNavItem.objectType.toLowerCase().indexOf('video') > -1 ) { objectType = 'video'; youTube = true; }
     else if (selectedNavItem.objectType.toLowerCase().indexOf('user') > -1 ) { objectType = 'user'; youTube = true; }
+    else if (selectedNavItem.objectType.toLowerCase().indexOf('wiki') > -1 ) { objectType = 'wiki'; youTube = true; }
 
     if ( youTube && objectType != null && selectedNavItem.objectID ) {
       //This is a Youtube Channel or Playlist
@@ -91,7 +96,7 @@ export default class AboutInfo extends React.Component<IAboutInfoProps, IAboutIn
 
     } else if ( selectedNavItem.mediaSource === 'facebook' ) {
       //This is a Youtube Channel or Playlist
-      console.log('Facebook page props: ', selectedNavItem);
+      //console.log('Facebook page props: ', selectedNavItem);
       aboutPane = React.createElement(
         FacebookPage,
         {
@@ -102,14 +107,14 @@ export default class AboutInfo extends React.Component<IAboutInfoProps, IAboutIn
           showFacepile: false,
         }
       );
-      console.log('aboutPane:', aboutPane);
+      //console.log('aboutPane:', aboutPane);
 
     } else if ( selectedNavItem.mediaSource === 'twitter' ) {
       //This is a Youtube Channel or Playlist
-      console.log('Twitter page props: ', selectedNavItem);
+      //console.log('Twitter page props: ', selectedNavItem);
       aboutPane = <TweetsFeedWebPart
 
-          title={Entity.title}
+          title={Entity.Title}
           account= {selectedNavItem.objectID}
           width= '600'
           height= '400'
@@ -127,11 +132,15 @@ export default class AboutInfo extends React.Component<IAboutInfoProps, IAboutIn
 
       ></TweetsFeedWebPart>;
 
-      console.log('aboutPane:', aboutPane);
+      //console.log('aboutPane:', aboutPane);
 
-    } else if ( selectedNavItem.mediaSource.indexOf('web') > -1 || selectedNavItem.mediaSource === 'blog' ) {
-      //This is a Youtube Channel or Playlist
-      console.log('Webpage page props: ', selectedNavItem);
+    } else if ( selectedNavItem.mediaSource.indexOf('web') > -1 
+    || selectedNavItem.mediaSource === 'wikipedia' 
+    || selectedNavItem.mediaSource === 'blog' 
+    || selectedNavItem.mediaSource === 'office365' 
+    || selectedNavItem.mediaSource === 'home' ) {
+      //This is a website type object
+      //console.log('Webpage page props: ', selectedNavItem);
       aboutPane = 
       <Iframe url={selectedNavItem.url}
         width= '600'
@@ -143,7 +152,7 @@ export default class AboutInfo extends React.Component<IAboutInfoProps, IAboutIn
       />
       ;
 
-      console.log('aboutPane:', aboutPane);
+      //console.log('aboutPane:', aboutPane);
 
     } else if ( selectedNavItem.mediaSource === 'twitter' ) {
       aboutPane = 
@@ -164,7 +173,7 @@ export default class AboutInfo extends React.Component<IAboutInfoProps, IAboutIn
         { ( !showDebug && this.props.parentState.selectedEntity ? (JSON.stringify(this.props.parentState.selectedEntity.navigation, undefined, 4)) : '')  }
         <Stack horizontal={false} horizontalAlign={"center"} tokens={stackFormRowsTokens}>
           <div style={{ fontSize: 20, fontWeight: 'bold'}}>
-            { (showDebug ? 'This is the entire JSON for ' + this.props.parentState.selectedEntity.title : '' )}
+            { (showDebug ? 'This is the entire JSON for ' + this.props.parentState.selectedEntity.Title : '' )}
           </div>
           <div>
             { (showDebug && this.props.parentState.selectedEntity ? (JSON.stringify(this.props.parentState.selectedEntity, undefined, 4)) : '')  }                
@@ -194,7 +203,7 @@ export default class AboutInfo extends React.Component<IAboutInfoProps, IAboutIn
 
 
     if ( this.props.parentState.selectedEntity && this.props.parentState.navigationType !== 'asdfasdf' ) {
-      console.log('Inside AboutInfo');
+      //console.log('Inside AboutInfo');
       return (
         <div className={styles.aboutIframe}>
         <Stack horizontal={false} horizontalAlign={"center"} tokens={stackFormRowsTokens}>{/* Stack for Buttons and Fields */}
@@ -209,4 +218,4 @@ export default class AboutInfo extends React.Component<IAboutInfoProps, IAboutIn
       return null;
     }
   }
-  }
+}

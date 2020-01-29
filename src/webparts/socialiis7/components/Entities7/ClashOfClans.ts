@@ -5,82 +5,85 @@ import { IEntity } from '../ISocialiis7Props';
 export function ClashOfClans(){
 
     const entity :IEntity = {
-      title: 'Clash Of Clans', //
+      Title: 'Clash Of Clans', //
       keywords: ["ttp","Gaming","IPad","Mobile"],
       profilePic: "https://pbs.twimg.com/profile_images/1006114388397391874/5mcVx5ku_400x400.jpg",
       blog: [
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
+          objectType: 'TBD', //Used to determine what functions to have avaialble
         }
       ],
       twitter:
         {
-          title: '@ClashOfClans',
+          NavTitle: '@ClashOfClans',
           order: 1, //For Sorting
           url: 'https://twitter.com/ClashofClans',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
-      ,  // End twitter
+          objectType: 'TBD', //Used to determine what functions to have avaialble
+        } ,  // End twitter
       facebook:
       {
-        title: 'ClashOfClans',
+        NavTitle: 'ClashOfClans Facebook',
         order: 1, //For Sorting
-        url: 'https://www.facebook.com/gaming/clashofclans/?sub_view=videos&fbsource=1103&external_ref=game_search_unit',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
-      }
-      ,  // End facebook
+        url: 'https://www.facebook.com/gaming/clashofclans/',
+        objectType: 'TBD', //Used to determine what functions to have avaialble
+      } ,  // End facebook
       linkedIn:
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
-      ,  // End linkedIn
+          objectType: 'TBD', //Used to determine what functions to have avaialble
+        } ,  // End linkedIn
       github:
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
-      ,  // End github
+          objectType: 'TBD', //Used to determine what functions to have avaialble
+        } ,  // End github
+      wikipedia:
+      {
+        NavTitle: 'Clash Of Clans Wikipedia',
+        order: 1, //For Sorting
+        url: 'https://en.wikipedia.org/wiki/Clash_of_Clans',
+        objectType: '', //Used to determine what functions to have avaialble
+      },  // End wikipedia
       webSites: [
         {
-          title: 'Clash Of Clans Wikipedia',
+          NavTitle: '',
           order: 1, //For Sorting
-          url: 'https://en.wikipedia.org/wiki/Clash_of_Clans',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
+          url: '',
+          objectType: 'TBD', //Used to determine what functions to have avaialble
         }
       ],
       youtube: {
-        title: 'YouTube',
+        NavTitle: 'YouTube Official Channel',
         user: 'OfficialClashOfClans', //Youtube User (from URL)
         order: 0, //For Sorting
         items: [
           {
-            title: 'OfficialClashOfClans',
+            NavTitle: '',
             objectType: 'Channel', //user,Channel, Playlist, Videos, Video
-            objectID: 'OfficialClashOfClans', //Used to determine what functions to have avaialble
-            objectUrl: 'https://www.youtube.com/user/OfficialClashOfClans', // to be used as generic link if no API key is given
+            objectID: '', //Used to determine what functions to have avaialble
+            url: '', // to be used as generic link if no API key is given
           },{
-            title: '',
+            NavTitle: '',
             objectType: 'Video', //user,Channel, Playlist, Videos, Video
             objectID: '', //Used to determine what functions to have avaialble
-            objectUrl: '', // to be used as generic link if no API key is given
+            url: '', // to be used as generic link if no API key is given
           },{
-            title: '',
+            NavTitle: '',
             objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
             objectID: '', //Used to determine what functions to have avaialble
-            objectUrl: '', // to be used as generic link if no API key is given
+            url: '', // to be used as generic link if no API key is given
           },{
-            title: '',
+            NavTitle: '',
             objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
             objectID: '', //Used to determine what functions to have avaialble
-            objectUrl: '', // to be used as generic link if no API key is given
+            url: '', // to be used as generic link if no API key is given
           }
         ] // End YouTube items
       }, // End YouTube

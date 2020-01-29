@@ -5,72 +5,75 @@ export function Lions(){
 
   const entity :IEntity = {
 
-      title: 'Lions', //
+      Title: 'Lions', //
       keywords: ["ttp","Animals","Africa"],
       profilePic: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/1024px-Lion_waiting_in_Namibia.jpg",
+      wikipedia:
+      {
+        NavTitle: 'Lions Wikipedia',
+        order: 1, //For Sorting
+        url: 'https://en.wikipedia.org/wiki/Lion',
+        objectType: '', //Used to determine what functions to have avaialble
+      },  // End wikipedia
       blog: [
         {
-          title: 'Lions',
+          NavTitle: '',
           order: 1, //For Sorting
-          url: 'https://en.wikipedia.org/wiki/Lion',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
+          url: '',
+          objectType: 'TBD', //Used to determine what functions to have avaialble
         }
       ],
       twitter:
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
-      ,  // End twitter
+          objectType: 'TBD', //Used to determine what functions to have avaialble
+        } ,  // End twitter
       facebook:
       {
-        title: '',
+        NavTitle: '',
         order: 1, //For Sorting
         url: '',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
-      }
-      ,  // End facebook
+        objectType: 'TBD', //Used to determine what functions to have avaialble
+      } ,  // End facebook
       linkedIn:
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
-      ,  // End linkedIn
+          objectType: 'TBD', //Used to determine what functions to have avaialble
+        } ,  // End linkedIn
       github:
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
-        }
-      ,  // End github
+          objectType: 'TBD', //Used to determine what functions to have avaialble
+        } ,  // End github
       webSites: [
         {
-          title: '',
+          NavTitle: '',
           order: 1, //For Sorting
           url: '',
-          codeType: 'TBD', //Used to determine what functions to have avaialble
+          objectType: 'TBD', //Used to determine what functions to have avaialble
         }
       ],
       youtube: {
-        title: 'YouTube',
+        NavTitle: 'YouTube',
         user: '', //Youtube User (from URL)
         order: 0, //For Sorting
         items: [
           {
-            title: 'YouTube for Lions',
+            NavTitle: 'YouTube for Lions',
             objectType: 'Video', //user,Channel, Playlist, Videos, Video
-            objectID: '', //Used to determine what functions to have avaialble
-            objectUrl: 'https://www.youtube.com/watch?v=5oqtcM0Y7Jo', // to be used as generic link if no API key is given
+            objectID: '5oqtcM0Y7Jo', //Used to determine what functions to have avaialble
+            url: '', // to be used as generic link if no API key is given
           },{
-            title: '',
+            NavTitle: '',
             objectType: 'Channel', //user,Channel, Playlist, Videos, Video
             objectID: '', //Used to determine what functions to have avaialble
-            objectUrl: '', // to be used as generic link if no API key is given
+            url: '', // to be used as generic link if no API key is given
           }
         ], // End YouTube items
 

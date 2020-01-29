@@ -4,6 +4,9 @@ import { PageContext } from '@microsoft/sp-page-context';
 
 import { Nav, INavLink } from 'office-ui-fabric-react/lib/Nav';
 
+import { ITheTime } from '../../../services/dateServices';
+
+
 export interface ISocialTopicModel {
 
 
@@ -16,38 +19,40 @@ export interface ISocialModels {
 }
 
 export interface IWeb {
-  title: string;
+  NavTitle: string;
   titleKey?: string;
-  order: number; //For Sorting
+  order?: number; //For Sorting
   url: string;
-  codeType: string; //Used to determine what functions to have avaialble
+  objectType?: string; //Used to determine what functions to have avaialble
   objectID?: string;
 
 }
 
 export interface INewsFeed {
-  title: string;
+  NavTitle: string;
   titleKey?: string;
   order: number; //For Sorting
   url: string;
-  codeType: string; //Used to determine what functions to have avaialble
+  objectType: string; //Used to determine what functions to have avaialble
 
 }
 
-export interface IYoutubeObject {
-  title: string;
-  objectType: string; //user,Channel, Playlist, Videos, Video
-  objectID: string; //Used to determine what functions to have avaialble
-  objectUrl: string; // to be used as generic link if no API key is given
+export interface IYoutubeObject extends IWeb{
+  NavTitle: string;
+  titleKey?: string;
+  objectType?: string; //user,Channel, Playlist, Videos, Video
+  objectID?: string; //Used to determine what functions to have avaialble
+  url: string; // to be used as generic link if no API key is given
+  order?: number; //For Sorting
 }
 
 export interface IYoutube {
-  title: string;
+  NavTitle: string;
   user?: string; //Youtube User (from URL)
   order?: number; //For Sorting
-  items?: IYoutubeObject[];
-  channels?: IYoutubeObject[];
-  playLists?: IYoutubeObject[];
+  items?: IWeb[];
+  channels?: IWeb[];
+  playLists?: IWeb[];
 
 }
 
@@ -55,19 +60,27 @@ export interface IYoutube {
  * 
  */
 
+export const NonArrayNodes = ['facebook','twitter','stackExchange','linkedIn','github','wikipedia','instagram','home'];
+
 export interface IEntity {
-  title: string; //
+  Title: string; //
+  source?: string;
   titleKey?: string;
   footPrint?: string[];
   keywords: string[];
+  keywordsText?: string;
+
   profilePic: string;
   webSites?: IWeb[];
   youtube?: IYoutube;
   twitter?: IWeb;
   linkedIn?: IWeb;
   blog?: IWeb[];
+  office365?: IWeb[];
   instagram?:IWeb;
   facebook?: IWeb;
+  stackExchange?: IWeb;
+  home?: IWeb;
   github?: IWeb;
   location?: IWeb; //Like Bing Map of city or office or whatever.
   androidStore?: any;
@@ -126,6 +139,15 @@ export interface ITopics {
     subTopic1?: string;
     subTopic2?: string;
     subTopic3?: string;
+    toggleDef?: string;  //String of topics with ; parser for Default load
+    toggle0?: string;  //String of topics with ; parser for Toggle button
+    toggle1?: string;  //String of topics with ; parser for Toggle button
+    toggle2?: string;  //String of topics with ; parser for Toggle button
+    toggle3?: string;  //String of topics with ; parser for Toggle button
+    toggle4?: string;  //String of topics with ; parser for Toggle button
+    specific?: string; //For specific list of entities
+    random?: string; //For Random topics
+    current?: number;
 
 }
 export interface ISocialiis7Props {
@@ -135,14 +157,26 @@ export interface ISocialiis7Props {
   pageContext: PageContext;
   tenant: string;
   urlVars: {};
-
+  pageType: string; //localWorkbench; hostedWorkbench; SharePoint
+  WebpartElement: HTMLElement;   //Size courtesy of https://www.netwoven.com/2018/11/13/resizing-of-spfx-react-web-parts-in-different-scenarios/
+ 
   // 1 - Analytics options
   useListAnalytics: boolean;
   analyticsWeb?: string;
   analyticsList?: string;
+  startTime: ITheTime;
+  analyticsLoad: boolean;
+  analyticsEntity: boolean;
+  analyticsNav: boolean;
+  analyticsError: boolean;
 
   // 2 - Source and destination list information
-  sourceListURL?: string; //Get from list item  
+  useLocalList: Boolean;
+  useMasterList: Boolean;
+  localListURL?: string; //Get from list item
+  masterListURL?: string; //Corporate or Central list url
+  localListFilter?: string; //Get from list item
+  masterListFilter?: string; //Corporate or Central list url
   sourceListTitle: string;  // Static Name of list (for URL) - used for links and determined by first returned item
 
   // 3 - 
@@ -150,13 +184,15 @@ export interface ISocialiis7Props {
   // 4 - 
 
   // 5 - UI Defaults
-
+  setLayout?: string;
+  
   // 6 - User Feedback
 
   // 7 - Media Choices - Left Side bar
   navigationType: string;
 
   topics: ITopics;
+  togglePropTopicHelp: boolean;
 
   userEntities1: string;
   userEntities2: string;  

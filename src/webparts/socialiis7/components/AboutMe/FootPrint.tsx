@@ -27,7 +27,7 @@ export default class FootPrint extends React.Component<IFootPrintProps> {
     let imageHeight = 64;
     let imageWidth = 64;
     let padding = 10;
-    //console.log('AboutMe: this.props',this.props);
+    console.log('AboutMe: this.props',this.props);
     let thisTop = `${imageHeight * .6 }px`;
     thisTop = `${ 0 }px`;
     let thisHeight = `${imageHeight}px`;
@@ -44,7 +44,7 @@ export default class FootPrint extends React.Component<IFootPrintProps> {
     let footPrint2 : IFootPrints[] = [];
 
     //This section creates all icons but grays out unused mediaTypes
-    footPrint1.push({ opacity: this.props.footprint.indexOf('wiki') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconWiki });
+    footPrint1.push({ opacity: this.props.footprint.indexOf('wikipedia') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconWiki });
     footPrint1.push({ opacity: this.props.footprint.indexOf('web') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconWebsite });
     footPrint1.push({ opacity: this.props.footprint.indexOf('linkedin') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconLinkedIn });
     footPrint1.push({ opacity: this.props.footprint.indexOf('blog') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconBlog });
@@ -52,9 +52,11 @@ export default class FootPrint extends React.Component<IFootPrintProps> {
     footPrint1.push({ opacity: this.props.footprint.indexOf('facebook') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconFacebook });
     footPrint1.push({ opacity: this.props.footprint.indexOf('twitter') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconTwitter });
     footPrint1.push({ opacity: this.props.footprint.indexOf('youtube') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconYouTube });
+    footPrint1.push({ opacity: this.props.footprint.indexOf('github') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconGithub });
+    footPrint1.push({ opacity: this.props.footprint.indexOf('stackexchange') > -1 ? 1 : maskedOpacity , imageUrl:  MyIcons.iconStackExchange });
 
     //This section only creates icon if the mediaType exists on the entity
-    if ( this.props.footprint.indexOf('wiki') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconWiki }); }
+    if ( this.props.footprint.indexOf('wikipedia') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconWiki }); }
     if ( this.props.footprint.indexOf('web') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconWebsite }); } 
     if ( this.props.footprint.indexOf('linkedin') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconLinkedIn }); } 
     if ( this.props.footprint.indexOf('blog') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconBlog }); } 
@@ -62,6 +64,8 @@ export default class FootPrint extends React.Component<IFootPrintProps> {
     if ( this.props.footprint.indexOf('facebook') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconFacebook }); } 
     if ( this.props.footprint.indexOf('twitter') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconTwitter }); } 
     if ( this.props.footprint.indexOf('youtube') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconYouTube }); } 
+    if ( this.props.footprint.indexOf('github') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconGithub }); } 
+    if ( this.props.footprint.indexOf('stackexchange') > -1 ) { footPrint2.push({ opacity:  1 , imageUrl:  MyIcons.iconStackExchange }); } 
 
     //                className={
     //    styles.pTileItemImageCustom} 
