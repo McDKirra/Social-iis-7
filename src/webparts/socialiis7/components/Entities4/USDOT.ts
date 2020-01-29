@@ -4,102 +4,102 @@ import { IEntity } from '../ISocialiis7Props';
 export function USDOT(){
 
   const entity :IEntity = {
-    title: 'USDOT', //
+    Title: 'USDOT', //
     keywords: ["Auto","Regulatory","NA","North America"], // Can be any number of
     profilePic: "https://www.transportation.gov/sites/dot.gov/files/styles/homepage_slider_980_400/public/slides/AV%204.jpg?itok=fIe2Kf_J",
     blog: [
       {
-        title: 'USDOT Blog',
+        NavTitle: 'USDOT Blog',
         order: 1, //For Sorting
         url: 'https://www.transportation.gov/blog/connections',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
+        objectType: 'TBD', //Used to determine what functions to have avaialble
       }
     ],
     twitter: 
       {
-        title: 'USDOT Twitter',
+        NavTitle: 'USDOT Twitter',
         order: 1, //For Sorting
         url: 'https://twitter.com/USDOT',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
+        objectType: 'TBD', //Used to determine what functions to have avaialble
       }
     ,  // End twitter
     facebook: 
     {
-      title: 'USDOT Facebook',
+      NavTitle: 'USDOT Facebook',
       order: 1, //For Sorting
       url: 'https://www.facebook.com/USDOT/',
-      codeType: 'TBD', //Used to determine what functions to have avaialble
+      objectType: 'TBD', //Used to determine what functions to have avaialble
     }
     ,  // End facebook
     linkedIn: 
       {
-        title: 'USDOT Linked In',
+        NavTitle: 'USDOT Linked In',
         order: 1, //For Sorting
         url: 'https://www.linkedin.com/company/us-department-of-transportation-dot',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
+        objectType: 'TBD', //Used to determine what functions to have avaialble
       }
     ,  // End linkedIn
     github: 
       {
-        title: '',
+        NavTitle: '',
         order: 1, //For Sorting
         url: '',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
+        objectType: 'TBD', //Used to determine what functions to have avaialble
       }
     ,  // End github
     webSites: [
       {
-        title: 'Transportation.gov',
+        NavTitle: 'Transportation.gov',
         order: 1, //For Sorting
         url: 'https://www.transportation.gov/',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
+        objectType: 'TBD', //Used to determine what functions to have avaialble
       },{
-        title: '',
+        NavTitle: '',
         order: 1, //For Sorting
         url: '',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
+        objectType: 'TBD', //Used to determine what functions to have avaialble
       },{
-        title: '',
+        NavTitle: '',
         order: 1, //For Sorting
         url: '',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
+        objectType: 'TBD', //Used to determine what functions to have avaialble
       },{
-        title: '',
+        NavTitle: '',
         order: 1, //For Sorting
         url: '',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
+        objectType: 'TBD', //Used to determine what functions to have avaialble
       }
     ],
     youtube: {
-      title: 'YouTube',
+      NavTitle: 'YouTube',
       user: 'usdotgov', //Youtube User (from URL)
       order: 0, //For Sorting
       items: [
         {
-          title: '',
+          NavTitle: '',
           objectType: 'Video', //user,Channel, Playlist, Videos, Video
           objectID: '', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
+          url: '', // to be used as generic link if no API key is given
         },{
-          title: '',
+          NavTitle: '',
           objectType: 'Channel', //user,Channel, Playlist, Videos, Video
           objectID: '', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
+          url: '', // to be used as generic link if no API key is given
         },{
-          title: '',
+          NavTitle: '',
           objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
           objectID: '', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
+          url: '', // to be used as generic link if no API key is given
         },{
-          title: '',
+          NavTitle: '',
           objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
           objectID: '', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
+          url: '', // to be used as generic link if no API key is given
         },{
-          title: '',
+          NavTitle: '',
           objectType: 'Playlist', //user,Channel, Playlist, Videos, Video
           objectID: '', //Used to determine what functions to have avaialble
-          objectUrl: '', // to be used as generic link if no API key is given
+          url: '', // to be used as generic link if no API key is given
         }
 
 
@@ -108,10 +108,10 @@ export function USDOT(){
     }, // End YouTube
     instagram: 
       {
-        title: 'Instagram',
+        NavTitle: 'Instagram',
         order: 1, //For Sorting
         url: 'https://www.instagram.com/usdot/',
-        codeType: 'TBD', //Used to determine what functions to have avaialble
+        objectType: 'TBD', //Used to determine what functions to have avaialble
       }
     ,  // End linkedIn
 

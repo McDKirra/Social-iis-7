@@ -8,12 +8,13 @@ import {IUser, ISocialiis7State, IMyPivots, IPivot, ILoadData} from '../ISociali
 export function buildEntities9(onNavClick ) {
 
     let Entities : IEntity[] = [];
-    console.log('ents', ents);
-    Entities.push(addOtherProps(ents.MineCraft(), onNavClick));
-    Entities.push(addOtherProps(ents.SubNautica(), onNavClick));
-    Entities.push(addOtherProps(ents.PCBuild(), onNavClick));
-    Entities.push(addOtherProps(ents.Jays2Cents(), onNavClick));
-    Entities.push(addOtherProps(ents.FlightSimulator20(), onNavClick));
+    //console.log('ents', ents);
+    let thisSource: string = 'Entities9';
+    Entities.push(addOtherProps(ents.MineCraft(), onNavClick, thisSource ));
+    Entities.push(addOtherProps(ents.SubNautica(), onNavClick, thisSource ));
+    Entities.push(addOtherProps(ents.PCBuild(), onNavClick, thisSource ));
+    Entities.push(addOtherProps(ents.Jays2Cents(), onNavClick, thisSource ));
+    Entities.push(addOtherProps(ents.FlightSimulator20(), onNavClick, thisSource ));
 
     return Entities;
 }
